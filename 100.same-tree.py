@@ -12,6 +12,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
 
@@ -20,6 +21,4 @@ class Solution:
         return p is q
 
 
-
 # @lc code=end
-

@@ -15,9 +15,6 @@ class Solution:
             else:
                 res, R = max(res, height[R] * w), R - 1
         return res
-
-
-
         
 # @lc code=end
 

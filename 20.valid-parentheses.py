@@ -12,7 +12,6 @@ class Solution:
         mappings = {"(": ")", "{":"}", "[": "]"}
 
         for this_char in s:
-            
             # if opening bracket just append 
             if this_char in mappings: 
                 stack.append(this_char)

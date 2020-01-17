@@ -19,20 +19,16 @@ class Solution:
             ans = s[i]
 
         maxLen = 1
-        for start in range(n-1, -1, -1):
-            for end in range(start+1, n):    
+        for start in range(n - 1, -1, -1):
+            for end in range(start + 1, n):    
 
                 dp[start][end] = 1 if (s[start] == s[end] and (dp[start+1][end-1] or end == start + 1)) else 0 
 
                 if dp[start][end] == 1 and maxLen < end - start + 1:
                     maxLen = end - start + 1
-                    ans = s[start: end+ 1]
+                    ans = s[start: end + 1]
 
         return ans 
-
-
-
-
 
 
 # @lc code=end

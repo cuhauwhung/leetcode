@@ -11,6 +11,7 @@ class Solution:
         # di and dj is to change the directions 
         ans = [[0] * n for _ in range(n)]
         i, j, di, dj = 0, 0, 0, 1
+        
         for k in range(n*n):
             ans[i][j] = k + 1
 

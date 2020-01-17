@@ -17,7 +17,5 @@ class Solution:
             x += 1 
 
         return len(counter)
-
-
-
+        
 # @lc code=end

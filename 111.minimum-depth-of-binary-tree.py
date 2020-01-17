@@ -15,7 +15,8 @@
 
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
-        if root == None:
+
+        if root == None: 
             return 0
 
         if root.left == None or root.right == None:

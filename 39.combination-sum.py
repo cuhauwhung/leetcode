@@ -31,7 +31,6 @@ class Solution:
         # s is the marker to determine where we are on the candidates 
         dfs(candidates, target, 0, [], ans)
 
-        
         return ans
 
 # @lc code=end

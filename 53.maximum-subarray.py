@@ -15,7 +15,7 @@ class Solution:
         max_global = max_local = nums[0]
         
         for x in nums[1:]:
-            max_local = max(x, max_local +  x)
+            max_local = max(x, max_local + x)
             max_global = max(max_global, max_local)
             
         return max_global
