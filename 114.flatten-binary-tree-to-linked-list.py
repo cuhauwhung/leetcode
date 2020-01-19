@@ -17,6 +17,25 @@ class Solution:
         """
         Do not return anything, modify root in-place instead.
         """
-        
+
+        if not root: return
+        self.flatten(root.left)
+        self.flatten(root.right)
+
+        # move the left branch to the right 
+        # and then go the bottom most of the "just moved" right 
+        # and append previous right to the bottom most "just moved"
+
+        if root.left:
+
+            temp = root.right
+            root.right = root.left
+            root.left = None
+
+            while root.right:
+                root = root.right
+                
+            root.right = temp
+
 # @lc code=end
 

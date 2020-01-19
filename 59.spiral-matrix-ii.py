@@ -15,7 +15,7 @@ class Solution:
         for k in range(n*n):
             ans[i][j] = k + 1
 
-            # whenever we meet a corner, we switch 
+            # whenever we meet a corner, which is represented by a cell that is not 0, we switch 
             if ans[(i + di) % n][(j + dj) % n]:
                 di, dj = dj, -di
 

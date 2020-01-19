@@ -5,11 +5,14 @@
 #
 
 # @lc code=start
+
+
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
 
         m = len(grid)
-        if m == 0: return 0
+        if m == 0:
+            return 0
         n = len(grid[0])
 
         ans = 0
@@ -19,7 +22,6 @@ class Solution:
                     ans += 1
                     self.__dfs(grid, x, y, n, m)
         return ans
-    
 
     def __dfs(self, grid, x, y, n, m):
 
@@ -33,4 +35,3 @@ class Solution:
         self.__dfs(grid, x, y - 1, n, m)
 
 # @lc code=end
-
