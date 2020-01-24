@@ -25,15 +25,14 @@ class Solution:
                 ans.append("".join(curr[:]))
                 return
 
-            print("{} : {} : {}".format(s, digits[s], phone_map[digits[s]]))
             for j in phone_map[digits[s]]:
                 curr.append(j)
                 dfs(digits, phone_map, s+1, curr, ans)
                 curr.pop()
 
-        if not digits:
-            return []
+        if not digits: return []
         ans = list()
         dfs(digits, phone_map, 0, [], ans)
         return ans
+        
 # @lc code=end

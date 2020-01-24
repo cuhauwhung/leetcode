@@ -9,11 +9,13 @@ class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
 
         def dfs(left, right, ans, string):
-            if right < left: return
+            
             if not left and not right:
                 ans.append(string)
                 return
-                
+            
+            if right < left: return
+
             if left:
                 dfs(left-1, right, ans, string + "(")
 

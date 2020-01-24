@@ -11,7 +11,7 @@ class Solution:
         def dfs(nums, curr, ans):
 
             # no more nums means path is full 
-            if not len(nums):
+            if not nums:
                 ans.append(curr[:])
                 return 
                 
