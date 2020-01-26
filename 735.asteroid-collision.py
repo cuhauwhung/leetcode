@@ -7,6 +7,9 @@
 # @lc code=start
 class Solution:
     def asteroidCollision(self, asteroids):
+        
+        # keyidea: use a stack 
+
         res = []
         for ast in asteroids:
             if ast > 0:
@@ -34,7 +37,7 @@ class Solution:
                     # -ve made it all the way to the 
                     # bottom of the stack and destroyed all asteroids.
                     res.append(ast)
-                    
+
         return res
 
         

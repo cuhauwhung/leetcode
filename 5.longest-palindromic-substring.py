@@ -20,7 +20,6 @@ class Solution:
         maxLen = 1
         for start in range(n - 1, -1, -1):
             for end in range(start + 1, n):    
-                print(start, end)
                 dp[start][end] = 1 if (s[start] == s[end] and 
                 (dp[start+1][end-1] or end == start + 1)) else 0 
 

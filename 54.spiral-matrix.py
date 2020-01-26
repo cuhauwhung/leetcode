@@ -23,7 +23,6 @@ class Solution:
 
             # if the values are '', which are at the corners ,then we switch direction 
             if matrix[(i + di) % m][(j + dj) % n] == '':
-                print(" - ", i, j)
                 di, dj = dj, -di
 
             i += di
