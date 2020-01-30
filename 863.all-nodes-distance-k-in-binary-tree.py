@@ -28,7 +28,7 @@ class Solution:
         make_graph(None, root)
 
 
-        # use dfs to find graph at level k 
+        # use bfs to find graph at level k 
         seen = set()
         queue = [target.val]
 
