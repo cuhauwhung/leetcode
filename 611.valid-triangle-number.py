@@ -8,7 +8,6 @@
 class Solution:
     def triangleNumber(self, nums: List[int]) -> int:
 
-
         n = len(nums)
         ans = 0 
         nums.sort(reverse=True)
