@@ -8,7 +8,7 @@
 class Solution:
     def coinChange(self, coins, amount):
 
-        dp = [float('Inf')] * (amount + 1)
+        dp = [amount+1] * (amount + 1)
         dp[0] = 0
 
         for i in range(1, amount + 1):
@@ -17,7 +17,7 @@ class Solution:
                 if c <= i: 
                     dp[i] = min(dp[i], dp[i - c] + 1)
 
-        return -1 if dp[amount] == float('Inf') else dp[amount]  
+        return -1 if dp[amount] == amount+1 else dp[amount]  
 
         # # DFS + Greedy + Pruning solution
         # self.ans = float('Inf')
