@@ -8,7 +8,6 @@
 class Solution:
     def minKnightMoves(self, x: int, y: int) -> int:
         
-        
         if x == y == 0: return 0
         moves = [(-2, 1), (-1, 2), (1, 2), (2, 1), (2, -1), (1, -2), (-1, -2), (-2, -1)]
 
@@ -37,6 +36,4 @@ class Solution:
             
         return step
 
-                
 # @lc code=end
-
