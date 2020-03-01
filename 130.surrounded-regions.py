@@ -24,8 +24,8 @@ class Solution:
         R, C = len(board), len(board[0])
         if R <= 2 or C <= 2: return
         
-        # start from the boarder and replace all O to N
-        # put all the boarder value into queue.
+        # start from the border and replace all O to N
+        # put all the border value into queue.
         for i in range(R):
             dfs(board, i, 0, R, C) 
             dfs(board, i, C-1, R, C)
