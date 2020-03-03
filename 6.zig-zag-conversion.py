@@ -17,7 +17,6 @@ class Solution:
                 res += s[j]
                 secondJ = (j - i) + cycle - i
                 if (secondJ-j) % cycle != 0 and secondJ < len(s):
-                    print("j: {} | i: {} | j-i: {} | cycle: {}".format(j, i, j-i, cycle))
                     res += s[secondJ]
         return res
 
