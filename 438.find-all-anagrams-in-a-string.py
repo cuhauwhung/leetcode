@@ -16,6 +16,7 @@ class Solution:
         
         while j <= len(s):
 
+            # if the dicts are equal append index
             if p_dict == s_dict:
                 ans.append(i)
 
@@ -23,7 +24,8 @@ class Solution:
             if s_dict[s[i]] <= 0:
                 s_dict.pop(s[i])
                 
-            if j < len(s):    
+            # just keep moving forward 
+            if j < len(s):   
                  s_dict[s[j]] += 1
             
             j+=1
