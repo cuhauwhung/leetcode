@@ -16,6 +16,8 @@ class Solution:
                 k -= 1 
                 count = 0 
             
+            # if k is 0, we move i (beg. index forward)
+            # and we add count, if k is 0 we add count, if not break
             while k == 0:
                 k += nums[i] & 1 
                 i += 1 
