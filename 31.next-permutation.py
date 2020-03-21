@@ -11,10 +11,10 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
 
-        # key idea: we only want to increase as little as possible 
-        #           go from right to left and then find point where the increasing trend is broken
-        #           swap this value with the smallest possible number
-        #           reverse the suffix
+        # key: we only want to increase as little as possible 
+        #      go from right to left and then find point where the increasing trend is broken
+        #      swap this value with the smallest possible number
+        #      reverse the suffix
 
         i = j = len(nums)-1
         while i > 0 and nums[i-1] >= nums[i]:

@@ -8,7 +8,7 @@
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
 
-        # key idea: use BFS to check through possible combinations and then if word is not visited and is in the word set then we can just return the height from the queue 
+        # key: use BFS to check through possible combinations and then if word is not visited and is in the word set then we can just return the height from the queue 
 
         word_set, visited = set(wordList), set()
         queue = [(beginWord, 1)]
