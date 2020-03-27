@@ -21,7 +21,7 @@ class Solution:
             res.append(matrix[i][j])
             matrix[i][j] = ''
 
-            # if the values are '', which are at the corners ,then we switch direction 
+            # if the values are going out of bounds, then switch direction
             if matrix[(i + di) % m][(j + dj) % n] == '':
                 di, dj = dj, -di
 

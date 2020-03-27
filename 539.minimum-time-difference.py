@@ -21,7 +21,6 @@ class Solution:
             smallestDiff = min(smallestDiff, timePoints[i] - timePoints[i - 1])
             
         #Special case: smallest difference may occur between largest time and smallest time by wrapping around past midnight.
-        print(timePoints[-1], timePoints[0])
         smallestDiff = min(smallestDiff, 60 * 24 - timePoints[-1] + timePoints[0])
         
         return smallestDiff
