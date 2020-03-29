@@ -15,7 +15,7 @@ class Solution:
             while stack and T[i] >= T[stack[-1]]:
                 stack.pop()
             
-            if stack:
+            if len(stack) > 0:
                 ans[i] = stack[-1] - i 
 
             stack.append(i)

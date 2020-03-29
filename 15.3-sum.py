@@ -8,6 +8,8 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
 
+        # key: fix one index and then do 2sum, so O(n^2)
+
         if nums is None: return None         
         result = set(tuple())
         nums.sort()

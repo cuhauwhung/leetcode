@@ -17,7 +17,7 @@ class Solution:
             pid, time = int(pid), int(time)
 
             if event == 'start':
-                if stack:
+                if len(stack) > 0:
                     ans[stack[-1]] += time - prev_time 
                 stack.append(pid)
                 prev_time = time
