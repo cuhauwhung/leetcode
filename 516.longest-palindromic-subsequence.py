@@ -8,6 +8,9 @@
 class Solution:
     def longestPalindromeSubseq(self, s: str) -> int:
         
+        # key: use DP 
+        #      dp[i][j] = longest subsequence that is paindrome at indexes
+
         if s == s[::-1]: return len(s)
         n = len(s)
         dp = [[0 for j in range(n)] for i in range(n)]

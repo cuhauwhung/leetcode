@@ -8,6 +8,10 @@
 class Solution:
     def coinChange(self, coins, amount):
 
+        # key: use DP 
+        #      dp[i] = # of ways we can make change of this amount 
+        #              with current_coin
+
         dp = [amount+1] * (amount + 1)
         dp[0] = 0
 

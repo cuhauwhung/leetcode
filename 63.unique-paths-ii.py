@@ -8,6 +8,9 @@
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
 
+        # key: use DP
+        #      dp[i][j] = # of unique paths to (i, j)
+
         if not obstacleGrid: return 
 
         r, c = len(obstacleGrid), len(obstacleGrid[0])

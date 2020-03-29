@@ -7,7 +7,9 @@
 # @lc code=start
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-
+        
+        # key: use DP 
+        
         if not nums: return 0
         
         n = len(nums)

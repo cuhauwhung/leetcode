@@ -8,7 +8,9 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
 
-        # key idea: dp[i] means s[:i+1] can be segmented into words in the wordDicts
+        # key idea: use DP
+        #           dp[i] means s[:i+1] can be segmented into words in the wordDicts
+        
         dp = [False] * (len(s) + 1)  
         dp[0] = True
         for i in range(len(s)):

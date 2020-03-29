@@ -7,6 +7,9 @@
 # @lc code=start
 class Solution:
     def longestPalindrome(self, s: str) -> str:
+        
+        #key: use DP 
+        #     dp[i][j] = longest palindrome at given indexes of string
 
         n = len(s)
         if n <= 1: return s 

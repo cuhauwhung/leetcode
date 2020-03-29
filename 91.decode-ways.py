@@ -8,7 +8,9 @@
 class Solution:
     def numDecodings(self, s: str) -> int:
 
-        # dp[i] = # of ways to parse the string s[:i]
+        # key: use DP 
+        #      dp[i] = # of ways to parse the string s[:i]
+        
         if not s: return 0
         dp = [0 for _ in range(len(s) + 1)] 
 

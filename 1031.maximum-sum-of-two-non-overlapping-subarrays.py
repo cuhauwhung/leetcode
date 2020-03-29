@@ -8,7 +8,7 @@
 class Solution:
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         
-        # key: use kadanes algorithm with CDF
+        # key: use kadane's algorithm with CDF
         #      keep track of Lmax/Mmax (prefix sum with length L/M)
         #      add to the other 'half' to get max sum 
 

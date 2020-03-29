@@ -7,6 +7,11 @@
 # @lc code=start
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+
+        # key: use DP 
+        #      dp[i][j] = length of common subsequence 
+        #                  at text1[:i] and text2[:j]
+
         n, m = len(text1), len(text2)
         dp=[[0]*(m + 1) for _ in range(n+1)]
         

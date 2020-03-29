@@ -7,6 +7,10 @@
 # @lc code=start
 class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
+
+        # key: use DP 
+        #      
+
         dp = [1] + [0] * target
         for _ in range(d):
             for j in range(target, -1, -1):

@@ -8,6 +8,11 @@
 class Solution:
     def minDistance(self, word1: str, word2: str) -> int:
 
+        # key: use DP (The Levenshtein Distance)
+        #      dp[i][j] = edit distance value of word1[:i] and word2[:j]
+        #                 - see same char == no edit distance added 
+        #                 - diff char == take min of either replace, insert, or delete 
+
         m = len(word1)
         n = len(word2)
         dp = [[0] * (n + 1) for _ in range(m + 1)]

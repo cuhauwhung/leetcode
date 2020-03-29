@@ -8,9 +8,10 @@
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
 
-        # key: dp[i] = how many ways to make up cur_amount 
-        #      with coins we have so far. 
-        #.     When cur_coin == cur_amount, it has to refer back to dp[0] = 1
+        # key: use DP
+        #      dp[i] = how many ways to make up cur_amount 
+        #              with coins we have so far. 
+        #              - When cur_coin == cur_amount, it has to refer back to dp[0] = 1
         
         dp = [0] * (amount + 1)
         dp[0] = 1

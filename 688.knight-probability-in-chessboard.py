@@ -8,7 +8,9 @@
 class Solution:
     def knightProbability(self, N: int, K: int, r: int, c: int) -> float:
         
-        # Let f[r][c][n] be the probability of being on square (r, c) after n-steps
+        # key: use DP
+        #      f[r][c][n] = probability of being on square (r, c) 
+        #                   after n-steps
 
         moves = [(2,1),(2,-1),(-2,1),(-2,-1),(1,2),(1,-2),(-1,2),(-1,-2)]
         dp = [[0] * N for _ in range(N)]

@@ -8,7 +8,9 @@
 class Solution:
     def largestDivisibleSubset(self, nums: List[int]) -> List[int]:
         
-        # key: each dp[i] would be the subset that has the pairs satisfied, if nums[i] % nums[j], then we just add nums[i] to dp[j], giving us dp[i]
+        # key: use DP
+        #      dp[i] = subset that parits would be satisfied 
+        #      if nums[i] % nums[j], then we just add nums[i] to dp[j], giving us dp[i]
 
         nums.sort()
         if len(nums) == 0: return []

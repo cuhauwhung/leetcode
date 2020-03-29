@@ -8,6 +8,9 @@
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
 
+        # key: use DP
+        #      dp[i][j] = val of min path to (i, j)
+
         if not grid: return 
         r, c = len(grid), len(grid[0])
         dp = [[0 for _ in range(c)] for _ in range(r)]

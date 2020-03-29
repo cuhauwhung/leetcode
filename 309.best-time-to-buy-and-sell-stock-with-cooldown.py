@@ -7,6 +7,10 @@
 # @lc code=start
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+
+        # key: use DP 
+        #      dp[i][j] = profit if we performed rest, buy, sell on day i 
+
         if not prices: return 0 
         dp = [[0 for _ in range(3)] for _ in range(len(prices))]
 
@@ -15,9 +19,7 @@ class Solution:
         dp[0][1] = -prices[0]
         dp[0][2] = float('-inf')
         bought = dp[0][1]
-        
-        # print(prices[0], dp[0], bought)
- 
+         
         n = len(prices)
         for i in range(1, n):
 
@@ -33,9 +35,7 @@ class Solution:
             
             # keep track of the "max bought from the past"
             bought = max(bought, dp[i][1])
-            
-            # print(prices[i], dp[i], bought)
-        
+                    
         # return if we rest or sell on the last day
         return max(dp[n-1][0], dp[n-1][2])
 

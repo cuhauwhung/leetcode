@@ -9,7 +9,8 @@
 
 class Solution:
     def numWays(self, n: int, k: int) -> int:
-        # key: 
+        
+        # key: use DP 
         #      num_ways_diff[i] = num_ways[i-1] * (k-1)
         #      num_ways_same[i] = num_ways_diff[i-1] * 1                        
         #       -- num_ways_diff[i-1] <- all the cases where the i-1th and i-2th are different.

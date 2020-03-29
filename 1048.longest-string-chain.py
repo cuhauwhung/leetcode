@@ -8,7 +8,8 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         
-        # idea: use dictionary to perform DP and keep track of words that have appeared in 
+        # key: use DP to keep track of words that have appeared  
+        #      in the dictionary
         
         longest = 1
         d = dict()
