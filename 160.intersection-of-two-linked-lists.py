@@ -14,7 +14,7 @@
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         
-        # idea:
+        # key:
         #         a1 - a2 - \
         #                     c1 -c2
         #      b1 - b2 - b3 /

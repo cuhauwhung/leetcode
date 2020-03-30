@@ -8,7 +8,7 @@
 class Solution:
     def beforeAndAfterPuzzles(self, phrases: List[str]) -> List[str]:
 
-        # idea: tokenize all the phrases first and go through them to check  
+        # key: tokenize all the phrases first and go through them to check  
         res = list()
         s = [st.split(' ') for st in phrases]
         

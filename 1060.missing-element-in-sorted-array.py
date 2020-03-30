@@ -7,7 +7,7 @@
 class Solution:
     def missingElement(self, nums: List[int], k: int) -> int:
 
-        # idea: diff between physical length and value length
+        # key: diff between physical length and value length
 
         def missCount(nums, mid):
             return nums[mid] - nums[0] - mid

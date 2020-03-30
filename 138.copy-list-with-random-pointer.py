@@ -16,7 +16,7 @@ class Node:
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
 
-        # key idea: we have to go through all the nodes once to store the listnodes into the hashmap. 
+        # key: we have to go through all the nodes once to store the listnodes into the hashmap. 
         # Then we have to go through them a second time to actual map the positions of the nodes into the nodes in the hashmap!
 
         if head is None: return None

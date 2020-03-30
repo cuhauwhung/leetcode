@@ -7,7 +7,7 @@
 # @lc code=start
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        # idea: we have to track both local max and min because if the new number is a negative, then the next (min * new number) > (max * new number)
+        # key: we have to track both local max and min because if the new number is a negative, then the next (min * new number) > (max * new number)
 
         if not nums: return 
         locMin = locMax = gloMax = nums[0]

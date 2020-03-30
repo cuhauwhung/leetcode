@@ -8,7 +8,7 @@
 class Solution:
     def diffWaysToCompute(self, input: str) -> List[int]:
 
-        # idea: ways(2*3-4*5) = ways(2) *^* ways(3-4*5) U ways(2*3) *^- ways(4*5) U ways(2*3-4) *^* ways(5)
+        # key: ways(2*3-4*5) = ways(2) *^* ways(3-4*5) U ways(2*3) *^- ways(4*5) U ways(2*3-4) *^* ways(5)
 
         if input.isdigit(): return [int(input)]
         ans = list()

@@ -10,7 +10,7 @@ class Solution:
         """
         Do not return anything, modify board in-place instead.
         """
-        # idea: we have to start DFS from the borders (north, south, east, west) and turn all the explored paths from the borders into N. Then go through all nodes and turn N -> O and O -> X
+        # key: we have to start DFS from the borders (north, south, east, west) and turn all the explored paths from the borders into N. Then go through all nodes and turn N -> O and O -> X
 
         def dfs(board, i, j, R, C):
             if 0<=i<R and 0<=j<C and board[i][j] == "O":

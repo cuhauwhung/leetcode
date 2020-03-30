@@ -13,7 +13,7 @@ class Solution(object):
         :type upper: int
         :rtype: List[str]
         """
-        # idea: different between two positions has to be exactly or greater than 2 
+        # key: different between two positions has to be exactly or greater than 2 
 
         ans = list()
         nums = [lower-1] + nums + [upper+1]

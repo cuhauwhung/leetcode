@@ -8,7 +8,7 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
 
-        # idea: if its complete order, we can totally rule out one half 
+        # key: if its complete order, we can totally rule out one half 
         # but if its not, then we have to see which half we have to perform the binary search at 
 
         # recursive method 

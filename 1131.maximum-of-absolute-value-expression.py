@@ -8,7 +8,7 @@
 class Solution:
     def maxAbsValExpr(self, arr1: List[int], arr2: List[int]) -> int:
         
-        # key idea: max difference between distances from each person to one corner 
+        # key: max difference between distances from each person to one corner 
         #           find furthest and closest person for each corner, take diff,and track the max difference
 
         ans, n = 0, len(arr1)

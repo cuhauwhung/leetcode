@@ -18,7 +18,7 @@ class Solution:
 
         # return res
 
-        # idea: o(log n)
+        # key: o(log n)
         from collections import Counter 
         count = Counter(A)
         nums_new_home = []

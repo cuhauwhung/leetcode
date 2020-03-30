@@ -9,7 +9,7 @@ class Solution:
     def findLeaves(self, root: TreeNode) -> List[List[int]]:
         from collections import defaultdict
 
-        # key idea: is the lev = max(left, right) + 1 
+        # key: is the lev = max(left, right) + 1 
         #           level here is the distance from the leaves. If the node has no left and no 
         #           right, then its level would be 1. We then utilize the the max of these levels 
         #           for non leaves based on the max(left, right) and then append this info into a

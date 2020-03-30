@@ -8,7 +8,7 @@
 class Solution:
     def asteroidCollision(self, asteroids):
         
-        # keyidea: use a stack 
+        # key: use a stack 
 
         res = []
         for ast in asteroids:

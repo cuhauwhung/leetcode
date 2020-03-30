@@ -8,7 +8,7 @@
 class Solution:
     def kSmallestPairs(self, nums1: List[int], nums2: List[int], k: int) -> List[List[int]]:
 
-        # idea: keep heap of length 3 and keep replacing the root 
+        # key: keep heap of length 3 and keep replacing the root 
         # with pop and fill it with new sum(vals) if root > sum(vals) 
         heap = []
         for n1 in nums1:

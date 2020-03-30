@@ -6,7 +6,7 @@
 
 # @lc code=start
 class Solution:
-    # idea: keep looping and keep calling digit square. If seen return false, if not seen then keep going 
+    # key: keep looping and keep calling digit square. If seen return false, if not seen then keep going 
 
     def isHappy(self, n: int) -> bool:
         seen = set()

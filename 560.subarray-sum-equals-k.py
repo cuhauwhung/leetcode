@@ -8,7 +8,7 @@
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
 
-        # idea: keep track of the total sum and use the difference between total_sum and total_sum + i and store
+        # key: keep track of the total sum and use the difference between total_sum and total_sum + i and store
         # that difference into a dictionary. At the end, obtain how many times this difference (count) has appeared 
         sums, count = 0, 0 
         d = dict()

@@ -9,7 +9,7 @@ class Solution:
     def numMatchingSubseq(self, S: str, words: List[str]) -> int:
         from collections import defaultdict
 
-        # key: we make a dict of all the idxs of each char in S,
+        # key:  make a dict of all the idxs of each char in S,
         # then we go through each word and find if we can find a suitable idx 
         # for the current c and keep going until the end of the word 
         # break if we no idxs for current c exists or if we can't find a search_idx for the 

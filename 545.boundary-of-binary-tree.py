@@ -17,7 +17,7 @@
 class Solution:
     def boundaryOfBinaryTree(self, root: TreeNode) -> List[int]:
 
-        # key idea: use different traversal methods to find the different boundaries 
+        # key: use different traversal methods to find the different boundaries 
 
         # pre-order traversal 
         def dfs_leftmost(node):

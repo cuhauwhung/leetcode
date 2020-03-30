@@ -15,7 +15,7 @@
 class Solution:
     def verticalTraversal(self, root: TreeNode) -> List[List[int]]:
 
-        # idea: keep track of position and put that into 
+        # key: keep track of position and put that into 
 
         from collections import defaultdict
         seen = defaultdict(

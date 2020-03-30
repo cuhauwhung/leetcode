@@ -9,7 +9,7 @@ class Solution:
     def minDominoRotations(self, A: List[int], B: List[int]) -> int:
 
 
-        # key idea: we obtain count_a and count_b, then iterate through each number 1 by 1. If the count of a number at both lists - same == N, then that this total can fill up the length of the array, which means that we can perform rotations to get top or bottom all the same 
+        # key: we obtain count_a and count_b, then iterate through each number 1 by 1. If the count of a number at both lists - same == N, then that this total can fill up the length of the array, which means that we can perform rotations to get top or bottom all the same 
         from collections import defaultdict
 
         count_a = defaultdict(int)

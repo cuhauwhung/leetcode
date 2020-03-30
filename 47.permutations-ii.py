@@ -8,7 +8,7 @@
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
 
-        # idea: we have to use dfs, but we have to remember the visited indexes
+        # key: we have to use dfs, but we have to remember the visited indexes
         #       the visited is to prevent the curr 
 
         # def dfs(nums, visited, curr, ans):

@@ -7,7 +7,7 @@
 # @lc code=start
 class Solution:
     def find132pattern(self, nums: List[int]) -> bool:
-        # key idea: purpose of the stack is to find possible s2 values and then 
+        # key: purpose of the stack is to find possible s2 values and then 
         #           get rid of values that can act as s3, since we are popping values that 
         #           are smaller than n 
 

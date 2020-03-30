@@ -9,7 +9,7 @@ class Solution:
     def getPermutation(self, n: int, k: int) -> str:
         import math 
 
-        # key idea: essentially, the original list would have n! entries,
+        # key: essentially, the original list would have n! entries,
         #           for each number beginning with x we would have (n-1)! entries.
         
         numbers = [i for i in range(1, n+1)]

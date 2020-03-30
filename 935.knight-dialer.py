@@ -8,7 +8,7 @@
 class Solution:
     def knightDialer(self, N: int) -> int:
 
-        # idea: just go through all the buttons 
+        # key: just go through all the buttons 
 
         neighbors = {
             0:(4,6),

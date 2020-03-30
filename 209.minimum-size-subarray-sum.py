@@ -8,7 +8,7 @@
 class Solution:
     def minSubArrayLen(self, s: int, nums: List[int]) -> int:
 
-        # Key idea:
+        # key:
         #           1) keep running sum and add 
         #           2) if total_sum is more than s, then we have to move the start forward
 

@@ -8,7 +8,7 @@
 class Solution:
     def reorganizeString(self, S: str) -> str:
 
-        # keyidea: check if any one of the chars takes up more than half 
+        # key: check if any one of the chars takes up more than half 
         # of the possible array; if yes, return "". If no, then we can fit it 
         # into the array alternating [a _ a _ a _], interleaving with the other chars
 

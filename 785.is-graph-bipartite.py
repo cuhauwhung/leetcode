@@ -7,8 +7,9 @@
 # @lc code=start
 class Solution:
     def isBipartite(self, graph: List[List[int]]) -> bool:
-        # idea: neighbors at each level will be a different color
-        #       call DFS on self and then neighbors and keep track #       of colors 
+        
+        # key: neighbors at each level will be a different color
+        #       call DFS on self and then neighbors and keep track # of colors 
 
         color = dict()
         def dfs(pos):

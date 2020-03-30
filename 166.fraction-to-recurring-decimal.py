@@ -8,7 +8,7 @@
 class Solution:
     def fractionToDecimal(self, numerator: int, denominator: int) -> str:
         
-        # key idea: dealing with no decimals is easy
+        # key: dealing with no decimals is easy
         #           dealing with decimals is done by keeping track of the remainders 
         #           if the remainder appears again, this means that the div should be repeating
         

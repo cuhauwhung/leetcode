@@ -11,7 +11,7 @@ class Solution:
         Do not return anything, modify matrix in-place instead.
         """
 
-        # key idea: reverse matrix vertically and then transpose
+        # key: reverse matrix vertically and then transpose
         # matrix.reverse()
         # print(matrix)
         # for i in range(len(matrix)):
@@ -19,7 +19,7 @@ class Solution:
         #         matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 
 
-        # key idea: the first loop i is to see how many layers 
+        # key: the first loop i is to see how many layers 
         #           the second loop j is to see how many shifts we need 
 
         n = len(matrix[0])

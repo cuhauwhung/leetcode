@@ -8,7 +8,7 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         
-        # Idea: we go left to right multiply then back to right 
+        # key: we go left to right multiply then back to right 
         #       L[i] = L[i-1] * nums[i-1], where L[0] = 1
         #       same intuition going back from right -> left  
         #       then we just multiple L[i] * R[i]

@@ -15,7 +15,7 @@
 class Solution:
     def generateTrees(self, n: int) -> List[TreeNode]:
 
-        # idea: essentially, we go through and test the different roots 
+        # key: essentially, we go through and test the different roots 
         #       and build a subtree at root.left and root.right with 
         #       values that work! values that work will be placed at left/right positions
         #       no values will be inserted with None
