@@ -14,7 +14,6 @@ class Solution:
         #      Create mapping of indexes then perform binary search for index
         #      while keeping track of the index at source, if at end start again  
         
-        
         mapping = defaultdict(list)
         for i, c in enumerate(source):
             mapping[c].append(i)

@@ -8,6 +8,9 @@
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
 
+        # key: same as LC39, but the only different is that you can only use a number once 
+        #      hence, the differences are: 1) when calling dfs, you start with a +1 position and at the end you have to remove duplicate answers
+
         def dfs(candidates, target, s, ans, curr):
             if target == 0:
                 ans.append(curr[:])
@@ -31,8 +34,7 @@ class Solution:
         return ans
 
 
-# this is essentially thes ame as leetcode 39, but the only different is that you can only use a number once 
-# hence, the differences are: 1) when calling dfs, you start with a +1 position and at the end you have to remove duplicate answers
+
 
 
 
