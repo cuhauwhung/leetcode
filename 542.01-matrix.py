@@ -27,7 +27,7 @@ class Solution:
                     if 0 <= newx < n and 0 <= newy < m and (newx, newy) not in visited:
                         queue.append((newx, newy, level+1))
                         visited.add((newx, newy))
-                        
+
         ans = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):

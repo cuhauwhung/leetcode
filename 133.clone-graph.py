@@ -16,11 +16,8 @@ class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
         from collections import defaultdict
 
-
         if not node: return node
-
         visited = dict()
-
         queue = [node]
         visited[node] = Node(node.val, [])
 

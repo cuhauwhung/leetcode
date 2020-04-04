@@ -40,6 +40,7 @@ class Solution:
         if board[i][j] == 'M':
             board[i][j] = 'X'
             return board
+            
         dfs(board, i, j)
         return board 
 

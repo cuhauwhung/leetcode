@@ -7,7 +7,10 @@
 # @lc code=start
 class Solution:
     def deleteAndEarn(self, nums: List[int]) -> int:
-        # key: F(i) is the max number of points in [minimum, i]. Then we have F(i) = max(F(i-2)+ dic[i] * i, F(i-1))
+        
+        # key: use DP
+        #      dp[i] is the max number of points in [minimum, i]. 
+        #      Then we have dp[i] = max(dp[i-2] + dic[i] * i, dp[i-1])
 
         from collections import Counter
         if not nums: return 0        
@@ -22,4 +25,3 @@ class Solution:
         return curr
 
 # @lc code=end
-

@@ -14,10 +14,12 @@
 
 class Solution:
 
-    # key: at each node, we have 2 options: rob or not rob 
+    # key: use DP 
+    #      dp[i] = 2 options at given node 
+    #      at each node, we have 2 options: [not rob, rob]
+    
     def rob(self, root: TreeNode) -> int:
         res = self.robSub(root)
-
         return max(res)
 
     def robSub(self, root):
@@ -29,8 +31,6 @@ class Solution:
         res[0] = max(left[0], left[1]) + max(right[0], right[1])
         res[1] = root.val + left[0] + right[0]
 
-        print(root.val, res)
         return res 
 
 # @lc code=end
-

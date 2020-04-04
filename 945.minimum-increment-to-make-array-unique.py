@@ -8,17 +8,9 @@
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
         
+        # key: iterate from 0 to 1000000 and see if particular slot is empty 
+        #      fill slot with pre-recorded value that needs a new home  
 
-        # res = need = 0
-        # for i in sorted(A):
-        #     res += max(need - i, 0)
-        #     print("res: --" + str(res))
-        #     need = max(need + 1, i + 1)
-        #     print("need: -- " + str(need))
-
-        # return res
-
-        # key: o(log n)
         from collections import Counter 
         count = Counter(A)
         nums_new_home = []
@@ -36,4 +28,3 @@ class Solution:
 
 
 # @lc code=end
-
