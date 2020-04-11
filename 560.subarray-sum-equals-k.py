@@ -8,12 +8,14 @@
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
 
-        # key: keep track of the total sum and use the difference between total_sum and total_sum + i and store
-        # that difference into a dictionary. At the end, obtain how many times this difference (count) has appeared 
-        sums, count = 0, 0 
-        d = dict()
-        d[0] = 1
+        # key: use prefix sum 
+        #      whenever the sums has increased by a value of k, we've found a subarray of sums=k.
+        #      keep track of the total sum and use the value (total_sum + nums[i] - total_sum) and store
+        #      that difference into a dictionary. At the end, obtain how many times this difference (count) has appeared 
         
+        sums, count = 0, 0 
+        d = {0: 1}
+
         for i in range(len(nums)):
             sums += nums[i]
             count += d.get(sums - k, 0)

@@ -28,7 +28,7 @@ class FileSystem:
             if i == len(names)-1: 
 
                 # already exists 
-                if name in curr.children: # Already exists
+                if name in curr.children:
                     return False
                 
                 # create new path 
@@ -44,9 +44,9 @@ class FileSystem:
     def get(self, path: str) -> int:
         curr = self.root
         names = path[1:].split('/')
-        for i, name in enumerate(names):
+        for _, name in enumerate(names):
             if name not in curr.children:
-                return -1
+                return False
             curr = curr.children[name]
         return curr.val
 
