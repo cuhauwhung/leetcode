@@ -9,44 +9,34 @@ class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
         from collections import Counter 
 
-        # Task map to store if we've seen the item before
-        task_count = Counter(tasks)
-        current_time = 0
-        current_heap = []
-        
-        # Sorting from least to greatest inside of the heap current_heap
-        for k, v in task_count.items():
+        # key: schedule the most frequent tasks as frequently as possible. Begin with scheduling the most frequent task. 
+        #      Then cool-off for n, and in that cool-off period schedule tasks in order of frequency, or if no tasks are available, then be idle.
 
-            # Pushes item from least to greatest (hence the negative values)
-            heapq.heappush(current_heap, (-v, k)) 
-        
-        # Here we're running through the entire heap and processing the sorted tasks. Run until the list runs out
-        while current_heap: 
+        curr_time, heap = 0, []
+        for v in collections.Counter(tasks).values():
+            heapq.heappush(heap, -1*v)
+            
+        while heap:
+            temp = []
+            for _ in range(n+1):
+                curr_time += 1
 
-            index, temp = 0, []
+                if heap:
+                    timing = heapq.heappop(heap)
 
-            while index <= n:
-
-                # count interval time
-                current_time += 1 
-
-                if current_heap:
-                    timing, taskid = heapq.heappop(current_heap)
-
-                    # We're checking to see if it's at the end of the overall count. 
+                    # gets used up 
                     if timing != -1:
-                        temp.append((timing + 1, taskid))
-
-                # Checking to see if we're out of tasks. Exit the inner loop if both are true.
-                if not current_heap and not temp:  
+                        temp.append(timing+1)
+                
+                # out of tasks, add idle
+                if not heap and not temp:
                     break
-                else:
-                    index += 1
-
-            # Because we transfered all of the items from the heap to temp, we're transferring the updated one back to the heap to know if we should continue
+                    
             for item in temp:
-                heapq.heappush(current_heap, item)
+                heapq.heappush(heap, item)
+                
+        return curr_time
 
-        return current_time  
+
+
 # @lc code=end
-
