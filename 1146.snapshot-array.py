@@ -10,7 +10,7 @@ class SnapshotArray:
     # key: record the history of each cell. 
     # For each A[i], we will record its history
     # With a snap_id and a its value. 
-    # binary search the time point 
+    # bsearch the time point 
     
     def __init__(self, length: int):
         self.A = [[[-1, 0]] for _ in range(length)]

@@ -11,7 +11,7 @@ class Solution:
         from collections import defaultdict
 
         # key: similar to 792. 
-        #      Create mapping of indexes then perform binary search for index
+        #      Create mapping of indexes then perform bsearch for index
         #      while keeping track of the index at source, if at end start again  
         
         mapping = defaultdict(list)

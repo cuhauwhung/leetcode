@@ -7,27 +7,21 @@
 class Solution:
     def missingElement(self, nums: List[int], k: int) -> int:
 
-        # key: diff between physical length and value length
-
-        def missCount(nums, mid):
-            return nums[mid] - nums[0] - mid
+        # use bsearch
+        l, r = 0, len(nums) - 1
         
-        n = len(nums)
-        if nums[n-1] - nums[0] - (n - 1 - 0) < k:
-            return nums[n-1] + k - missCount(nums, n - 1)
-
-        l, r = 0, n - 1 
         while l < r:
-            mid = l + (r - l) // 2
-            if missCount(nums, mid) < k:
-                l = mid + 1 
+
+            mid = (l+r+1) // 2
+
+            #count the number of missing from the begining to mid point
+            if nums[mid] - nums[0] - mid < k:
+                l = mid
+
             else:
-                r = mid 
-        
-        return nums[l - 1] + k - missCount(nums, l - 1)
+                r = mid -1
 
-
-
-
+        # first val + kth missing num + left index of range
+        return nums[0] + k + l
 
 # @lc code=end

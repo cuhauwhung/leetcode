@@ -6,10 +6,10 @@
 
 # @lc code=start
 class TrieNode:
-        # Initialize your data structure here.
-        def __init__(self):
-            self.word=False
-            self.children={}
+    # Initialize your data structure here.
+    def __init__(self):
+        self.word=False
+        self.children={}
 
 class Trie:
 

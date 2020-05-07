@@ -20,16 +20,13 @@ class Solution:
             temp = []
             for _ in range(n+1):
                 curr_time += 1
-
                 if heap:
                     timing = heapq.heappop(heap)
-
-                    # gets used up 
                     if timing != -1:
                         temp.append(timing+1)
                 
-                # out of tasks, add idle
-                if not heap and not temp:
+                #not temp, add idle
+                if not temp:
                     break
                     
             for item in temp:

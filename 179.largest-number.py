@@ -14,7 +14,9 @@ class Solution:
             elif x1 + x2 < x2 + x1: return 1 
             else: return 0
 
-        if not any(nums): return "0"
+        if not any(nums): 
+            return "0"
+            
         return "".join(sorted(map(str, nums), key=functools.cmp_to_key(custom_func)))
 
 # @lc code=end

@@ -8,7 +8,7 @@
 class Solution:
     def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
 
-        # key: use binary search, but modify with k 
+        # key: use bsearch, but modify with k 
 
         left, right = 0, len(arr) - k
         while left < right:

@@ -8,51 +8,53 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
 
-        # key: if its complete order, we can totally rule out one half 
-        # but if its not, then we have to see which half we have to perform the binary search at 
+        # key: use bsearch
+        # if its complete order, we can totally rule out one half 
+        # but if its not, then we have to see which half we have to perform the bsearch at 
 
-        # recursive method 
-        def binary_search(nums, left, right, target):
+        # iterative method 
+        left, right = 0, len(nums) - 1  
 
-            if left > right: return -1 
+        while left <= right:
+
             mid = int(left + (right - left) / 2)
-
-            if target == nums[mid]: return mid
+            if target == nums[mid]: return mid 
 
             if nums[left] <= nums[mid]:
                 if nums[left] <= target and target < nums[mid]:
-                    return binary_search(nums, left, mid - 1, target)
+                    right = mid - 1 
                 else:
-                    return binary_search(nums, mid + 1, right, target)
+                    left = mid + 1 
             else:
                 if nums[mid] < target and target <= nums[right]:
-                    return binary_search(nums, mid + 1, right, target)
+                    left = mid + 1 
                 else:
-                    return binary_search(nums, left, mid - 1, target)
+                    right = mid - 1 
 
-        return binary_search(nums, 0, len(nums)-1, target)
+        return -1 
 
-        # # iterative method 
-        # left = 0 
-        # right = len(nums) - 1 
 
-        # while left <= right:
+        #   # recursive method 
+        # def binary_search(nums, left, right, target):
 
+        #     if left > right: return -1 
         #     mid = int(left + (right - left) / 2)
-        #     if target == nums[mid]: return mid 
+
+        #     if target == nums[mid]: return mid
 
         #     if nums[left] <= nums[mid]:
         #         if nums[left] <= target and target < nums[mid]:
-        #             right = mid - 1 
+        #             return binary_search(nums, left, mid - 1, target)
         #         else:
-        #             left = mid + 1 
+        #             return binary_search(nums, mid + 1, right, target)
         #     else:
         #         if nums[mid] < target and target <= nums[right]:
-        #             left = mid + 1 
+        #             return binary_search(nums, mid + 1, right, target)
         #         else:
-        #             right = mid - 1 
+        #             return binary_search(nums, left, mid - 1, target)
 
-        # return -1 
+        # return binary_search(nums, 0, len(nums)-1, target)
+
 
 # @lc code=end
 

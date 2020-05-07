@@ -8,7 +8,7 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
 
-        # key: use binary search twice. Once to find left and second to find right (lb # and ub )
+        # key: use bsearch twice. Once to find left and second to find right (lb # and ub )
         # when searching right, 
         # we want to keep pushing right thats why there is the equal sign  
 
