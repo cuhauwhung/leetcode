@@ -9,9 +9,8 @@ class Solution:
     def criticalConnections(self, n: int, connections: List[List[int]]) -> List[List[int]]:
         from collections import defaultdict 
 
-        # key: we have to detect cycle by using rank. Find the smallest rank returned by 
-        #      neighbor and remove that 
-        #
+        # key: we have to detect cycle by using rank. 
+        #      Find the smallest rank returned by neighbor and remove that 
         #      time: O(|E|)
         #      space: O(graph) + O(rank) + O(connections) = 3 * O(|E| + |V|) = O(|E|)
 

@@ -9,7 +9,8 @@ class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
         from collections import Counter 
 
-        # key: schedule the most frequent tasks as frequently as possible. Begin with scheduling the most frequent task. 
+        # key: schedule the most frequent tasks as frequently as possible. 
+        #      Begin with scheduling the most frequent task. 
         #      Then cool-off for n, and in that cool-off period schedule tasks in order of frequency, or if no tasks are available, then be idle.
 
         curr_time, heap = 0, []
@@ -20,12 +21,13 @@ class Solution:
             temp = []
             for _ in range(n+1):
                 curr_time += 1
+
                 if heap:
                     timing = heapq.heappop(heap)
                     if timing != -1:
                         temp.append(timing+1)
                 
-                #not temp, add idle
+                # no values to add, add idle 
                 if not temp:
                     break
                     
