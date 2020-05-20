@@ -14,7 +14,7 @@ class Solution:
         #         return i 
         # return len(nums) - 1
 
-        # bsearch: o(log n) 
+        # key: use bsearch: o(log n) 
         l, r = 0, len(nums)-1
         while l < r: 
             mid = l + (r-l)//2

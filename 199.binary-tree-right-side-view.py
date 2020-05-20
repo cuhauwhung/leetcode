@@ -16,6 +16,8 @@ class Solution:
     def rightSideView(self, root: TreeNode) -> List[int]:
         from collections import deque
 
+        # key: use BFS and add each node by level, append the last element of each level into result
+
         result = list()
         if not root: return result
         

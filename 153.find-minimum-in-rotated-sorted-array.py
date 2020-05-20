@@ -7,6 +7,8 @@
 # @lc code=start
 class Solution:
     def findMin(self, nums: List[int]) -> int:
+
+        # key: use bsearch 
         l, r = 0, len(nums)-1        
         while l < r:
             mid = (l+r) // 2 

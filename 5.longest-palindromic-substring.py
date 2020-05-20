@@ -10,6 +10,7 @@ class Solution:
         
         #key: use DP 
         #     dp[i][j] = longest palindrome at given indexes of string
+        #     ispalindrome only if: bb or bab 
 
         n = len(s)
         if n <= 1: return s 
@@ -28,7 +29,6 @@ class Solution:
 
                 if (dp[start][end] == 1 
                     and maxLen < end - start + 1):
-
                     maxLen = end - start + 1
                     ans = s[start: end + 1]
 

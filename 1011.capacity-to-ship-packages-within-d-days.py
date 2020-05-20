@@ -8,6 +8,8 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
 
+        # key: use bsearch 
+        
         l, r = max(weights), sum(weights)
 
         # mid is current capacity
