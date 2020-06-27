@@ -17,5 +17,5 @@ class Solution:
             else:
                 r = mid 
         return nums[l]  
-# @lc code=end
 
+# @lc code=end

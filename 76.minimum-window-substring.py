@@ -11,7 +11,7 @@ class Solution:
 
         # key: use sliding window. 
         #      use a separate variable counts to keep track if we are 
-        #      in the "desired" window space. If we are, then move left
+        #      in the "desired" window space
 
         hashmap = Counter(t)
         counts = len(t)

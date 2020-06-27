@@ -12,12 +12,11 @@ class Solution:
         # if its complete order, we can totally rule out one half 
         # but if its not, then we have to see which half we have to perform the bsearch at 
 
-        # iterative method 
         left, right = 0, len(nums) - 1  
 
         while left <= right:
 
-            mid = int(left + (right - left) / 2)
+            mid = left + (right - left) // 2
             if target == nums[mid]: return mid 
 
             if nums[left] <= nums[mid]:
@@ -32,29 +31,6 @@ class Solution:
                     right = mid - 1 
 
         return -1 
-
-
-        #   # recursive method 
-        # def binary_search(nums, left, right, target):
-
-        #     if left > right: return -1 
-        #     mid = int(left + (right - left) / 2)
-
-        #     if target == nums[mid]: return mid
-
-        #     if nums[left] <= nums[mid]:
-        #         if nums[left] <= target and target < nums[mid]:
-        #             return binary_search(nums, left, mid - 1, target)
-        #         else:
-        #             return binary_search(nums, mid + 1, right, target)
-        #     else:
-        #         if nums[mid] < target and target <= nums[right]:
-        #             return binary_search(nums, mid + 1, right, target)
-        #         else:
-        #             return binary_search(nums, left, mid - 1, target)
-
-        # return binary_search(nums, 0, len(nums)-1, target)
-
 
 # @lc code=end
 

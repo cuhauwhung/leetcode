@@ -8,17 +8,20 @@
 class Solution:
     def findDiagonalOrder(self, matrix: List[List[int]]) -> List[int]:
         from collections import defaultdict
-        result = [ ]
-        dd = defaultdict(list)
-        if not matrix: return result
+        res = []
+        if not matrix: return res
+        lines = defaultdict(list)
 
-        # indexes on a diagonal would have the same i+j+1
-        for i in range(0, len(matrix)):
-            for j in range(0, len(matrix[0])):
-                dd[i+j+1].append(matrix[i][j]) 
+        # indexes on a diagonal would have the same i+j
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
+                lines[i+j].append(matrix[i][j])
+                
+        for k in range(len(matrix) + len(matrix[0]) - 1):
+            if k % 2 == 0:
+                res += lines[k][::-1]
+            else:
+                res += lines[k]
+        return res
 
-        for k in sorted(dd.keys()):
-            if k%2==1: dd[k].reverse()
-            result += dd[k]
-        return result
 # @lc code=end

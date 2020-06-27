@@ -11,7 +11,7 @@ class Solution:
         # key: use max-heap to store "live" building
         #      go from left to right and perform one of 3 operations:
         #      1) remove dead buildings 
-        #      2) add new buildigs into heap 
+        #      2) add new buildings into heap 
         #      3) add result if height is different 
 
         events = [(L, -H, R) for L, R, H in buildings]

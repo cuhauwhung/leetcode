@@ -16,13 +16,14 @@ class Solution:
         
         # key: 
         #      use priority queue 
-        #      time= 0(nklog(k)) | n nodes, k lists, insert into heap takes log(k)
+        #      use count to tie break same values 
+        #      time= 0(nk log(k)) | n nodes, k lists, insert into heap takes log(k)
         #      space = 0(k) | only k nodes are stored at time 
 
         curr = head = ListNode(0)
         queue = [] 
         count = 0 
-
+    
         for l in lists:
             if l:
                 count += 1

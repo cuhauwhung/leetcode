@@ -10,9 +10,17 @@ from collections import Counter
 class Solution:
 
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        ans = list(Counter(nums).most_common(k))
-        ans = [x[0] for x in ans]
-        return ans 
+        
+        from collections import defaultdict
+        frq = defaultdict(list)
+        for key, cnt in Counter(nums).items():
+            frq[cnt].append(key)
+
+        res = []
+        for times in reversed(range(len(nums) + 1)):
+            res.extend(frq[times])
+            if len(res) >= k: return res[:k]
+
+        return res[:k]
 
 # @lc code=end
-

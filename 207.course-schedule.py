@@ -42,7 +42,7 @@ class Solution:
         for j in graph[i]:
             if not self.dfs(graph, visited, j):
                 return False
-        # after visit all the neighbours, mark it as done visited
+        # after visit all the neighbors, mark it as done visited
         visited[i] = 1
         return True
         

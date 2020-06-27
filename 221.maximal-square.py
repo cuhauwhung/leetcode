@@ -29,7 +29,6 @@ class Solution:
                             dp[i-1][j]) + 1 ) * int(matrix[i][j])
                             
                 res = max(res, dp[i][j]**2)
-        print(dp)
         return res
 
 # @lc code=end
